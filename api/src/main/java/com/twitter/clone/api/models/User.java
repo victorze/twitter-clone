@@ -1,4 +1,4 @@
-package com.twitter.clone.api.entity;
+package com.twitter.clone.api.models;
 
 import java.util.Date;
 
@@ -17,7 +17,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "users")
-public class Users {
+public class User {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idUsers;
@@ -79,5 +79,5 @@ public class Users {
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
-    
+
 }
