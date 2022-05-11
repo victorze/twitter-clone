@@ -21,27 +21,27 @@ Como usuario autenticado quiero...
 
 ## Endpoints (backend)
 
-#### Tweets `/api/tweets`
+Tweets `/api/tweets`
 
 - GET listar tweets (parámetros opcionales: userID, tweetID)
 - POST crear un tweet
 - DELETE eliminar un tweet
 
-#### Timeline `/api/timeline`
+Timeline `/api/timeline`
 
 - GET linea de tiempo de tweets
 
-#### Followers `/api/followers`
+Followers `/api/followers`
 
 - GET listar seguidores
 - PUT actualizar seguidores
 
-#### Users `/api/users/:id`
+Users `/api/users/:id`
 
 - GET obtener el perfil de un usuario
 - PUT actualizar el perfil de un usuario
 
-#### Auth
+Auth
 - `/api/register` POST registrar un nuevo usuario
 - `/api/login` POST iniciar sesión
 - `/api/logout` POST cerrar sesión
