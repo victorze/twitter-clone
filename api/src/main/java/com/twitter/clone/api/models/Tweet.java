@@ -17,10 +17,10 @@ import lombok.Data;
 public class Tweet {
 
     @Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-	private String text;
+    private String text;
 
     @ManyToOne
     private User user;
