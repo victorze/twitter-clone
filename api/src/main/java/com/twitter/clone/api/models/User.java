@@ -1,83 +1,29 @@
 package com.twitter.clone.api.models;
 
-import java.util.Date;
+import java.time.Instant;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.data.annotation.CreatedDate;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import lombok.Data;
 
 @Entity
-@Table(name = "users")
+@Data
 public class User {
+
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idUsers;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String username;
 	private String name;
 	private String bio;
     private String password;
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone="America/Lima" )
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	@Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at")
-	private Date createdAt;
-
-    public int getIdUsers() {
-        return idUsers;
-    }
-
-    public void setIdUsers(int idUsers) {
-        this.idUsers = idUsers;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+	@CreatedDate
+    private Instant createdAt;
 
 }
