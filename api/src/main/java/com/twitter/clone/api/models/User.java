@@ -15,15 +15,15 @@ import lombok.Data;
 @Data
 public class User {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
-	private String username;
-	private String name;
-	private String bio;
-	private String password;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String username;
+    private String name;
+    private String bio;
+    private String password;
 
-	@CreatedDate
-	private Instant createdAt;
+    @CreatedDate
+    private Instant createdAt;
 
 }
